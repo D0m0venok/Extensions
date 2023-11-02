@@ -8,6 +8,7 @@ public class Point : MonoBehaviour
         Type1,
         Type2,
         Type3,
+        Type4,
     }
 
     [SerializeField] private PointType _type;
@@ -21,6 +22,7 @@ public class Point : MonoBehaviour
             PointType.Type1 => Color.red,
             PointType.Type2 => Color.green,
             PointType.Type3 => Color.blue,
+            PointType.Type4 => Color.yellow,
             _ => throw new ArgumentOutOfRangeException()
         };
         Gizmos.DrawCube(transform.position, Vector3.one * 0.1f);
